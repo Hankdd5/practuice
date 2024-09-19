@@ -1,0 +1,258 @@
+/* Font-Face */
+@font-face {
+    font-family: 'HeadFont';
+    src: url("font/Poppins-ExtraBold.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BodyFont';
+    src: url("font/Lora-VariableFont_wght.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1rem;
+    font-family: 'BodyFont', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f2f5;
+    margin: 0;
+}
+
+header {
+    width: 100%;
+    background-color: #4169e1;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+header p {
+    font-size: 1.2rem;
+    font-family: 'BodyFont', Arial, sans-serif;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 15px;
+}
+
+header button {
+    font-family: 'BodyFont', Arial, sans-serif;
+    font-size: 1.2em;
+    padding: 0.75em 1.5em;
+    border: none;
+    border-radius: 10px;
+    background-color: #f8a12a;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+header button:hover {
+    background-color: #e68806;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    margin-top: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.container p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.container button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #f8a12a;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.container button:hover {
+    background-color: #e68806;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 0.9rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    header button {
+        font-size: 0.8rem;
+        padding: 0.6rem 1.2rem;
+    }
+
+    .container p {
+        font-size: 1rem;
+    }
+
+    .container button {
+        font-size: 0.8rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        min-height: 150px;
+        padding: 10px;
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+
+    header button {
+        font-size: 0.7rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .container p {
+        font-size: 0.9rem;
+    }
+
+    .container button {
+        font-size: 0.7rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+.reviewBox {
+    width: 100%;
+    min-height: 800px;
+    display: grid;
+    place-items: center;
+    padding: 50px 20px;
+}
+
+.reviewcon {
+    width: 100%;
+    max-width: 450px;
+    min-height: 350px;
+    max-height: 800px;
+    padding: 15px;
+    border-radius: 15px;
+    overflow-y: scroll;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.Info{
+    width: 100%;
+    max-width: 450px;
+
+    padding: 15px;
+    overflow-y: auto;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+.revProof{
+    display: flex;
+    align-items: center;
+}
+.revProof img{
+    width: 30px;
+}
+.conconreview1{
+    position: relative;
+    bottom: -100%;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+/* Profile Circle Image */
+.imgcircle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+/* Profile Container */
+.profilecon {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.profilecon img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover; /* Ensures image fills the circle */
+}
+
+/* Star Rating Box */
+.starBox {
+    margin: 10px 0;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+}
+
+.starBox img {
+    height: 30px;
+    width: 30px;
+}
+
+.revCon {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    word-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+    .reviewcon {
+        width: 90%;
+    }
+    .Info{
+        width: 90%;
+    }
+
+    .starBox {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .profilecon img,
+    .imgcircle {
+        width: 40px;
+        height: 40px;
+    }
+    .starBox img {
+        height: 25px;
+        width: 25px;
+    }
+}
